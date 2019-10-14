@@ -2,6 +2,14 @@
   "name": "html-webpack-transform-plugin",
   "version": "1.0.0",
   "description": "Assets Transform extension for the HTML Webpack Plugin",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html",
+    "html-webpack-plugin",
+    "transform",
+    "assets"
+  ],
   "main": "index.js",
   "files": [
     "index.js"
@@ -17,7 +25,7 @@
   "author": "RenoFi",
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
