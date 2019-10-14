@@ -1,7 +1,7 @@
 {
   "name": "html-webpack-transform-plugin",
   "version": "1.0.0",
-  "description": "html-webpack-transform-plugin",
+  "description": "Assets Transform extension for the HTML Webpack Plugin",
   "main": "index.js",
   "files": [
     "index.js"
