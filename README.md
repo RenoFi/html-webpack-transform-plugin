@@ -31,3 +31,40 @@ In the plugins section of your webpack config file, include the following:
 new HtmlWebpackPlugin()
 new HtmlWebpackTransformPlugin()
 ```
+
+## Options
+|Name|Type|Default|Description|
+|:--:|:--:|:-----:|:----------|
+|**`attributes`**|`{Object}`|`{}`|Map of attributes to add|
+|**`pathPrefix`**|`{String}`|`''`|Path prefix to use with each asset url|
+|**`transform`**|`{Function}`|`tag => tag`|A callback function that is execute on each tag to allow any transformation of tags. Function must return modified tag object|
+|**`replacePublicPath`**|`{Boolean}`|`false`|Used with `pathPrefix` option. If true - `publicPath` from webpack options will be replaced with `pathPrefix`|
+
+## Examples
+
+Add `crossorigin` attribue for each script tag:
+```
+new HtmlWebpackTransformPlugin({
+  attributes: {script: {crossorigin: 'anonymous'}},
+}),
+```
+
+Replace public path with `ejs` template variable for dynamic paths with `expresjs`:
+```
+new HtmlWebpackTransformPlugin({
+  pathPrefix: '<%= assetsPath %>/',
+  replacePublicPath: true,
+}),
+```
+
+Do anything else with the tags using `transform` callback:
+```
+new HtmlWebpackTransformPlugin({
+  transform: tag => {
+    // add additional properties
+    // add path prefix or remove public path
+    // or anything else
+    return tag;
+  },
+}),
+```
