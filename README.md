@@ -27,7 +27,7 @@ yarn add --dev html-webpack-transform-plugin
 
 In the plugins section of your webpack config file, include the following:
 
-```
+```js
 new HtmlWebpackPlugin()
 new HtmlWebpackTransformPlugin()
 ```
@@ -43,14 +43,14 @@ new HtmlWebpackTransformPlugin()
 ## Examples
 
 Add `crossorigin` attribue for each script tag:
-```
+```js
 new HtmlWebpackTransformPlugin({
   attributes: {script: {crossorigin: 'anonymous'}},
 }),
 ```
 
 Replace public path with `ejs` template variable for dynamic paths with `expresjs`:
-```
+```js
 new HtmlWebpackTransformPlugin({
   pathPrefix: '<%= assetsPath %>/',
   replacePublicPath: true,
@@ -58,7 +58,7 @@ new HtmlWebpackTransformPlugin({
 ```
 
 Do anything else with the tags using `transform` callback:
-```
+```js
 new HtmlWebpackTransformPlugin({
   transform: tag => {
     // add additional properties
