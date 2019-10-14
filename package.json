@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-transform-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Assets Transform extension for the HTML Webpack Plugin",
   "keywords": [
     "webpack",
