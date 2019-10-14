@@ -1,0 +1,31 @@
+{
+  "name": "html-webpack-transform-plugin",
+  "version": "1.0.0",
+  "description": "html-webpack-transform-plugin",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RenoFi/html-webpack-transform-plugin.git"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint index.js"
+  },
+  "author": "RenoFi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "^3.0.0 || ^4.0.0",
+    "webpack": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0"
+  }
+}
