@@ -35,5 +35,9 @@
   "peerDependencies": {
     "html-webpack-plugin": "^3.0.0 || ^4.0.0",
     "webpack": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5",
+    "**/**/minimist": "^1.2.5"
   }
 }
