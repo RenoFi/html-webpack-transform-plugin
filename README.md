@@ -4,6 +4,7 @@ Assets Transform extension for the HTML Webpack Plugin
 [![License](https://img.shields.io/github/license/renofi/html-webpack-transform-plugin)](https://github.com/RenoFi/html-webpack-transform-plugin/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/html-webpack-transform-plugin)](https://www.npmjs.com/package/html-webpack-transform-plugin)
 [![Build Status](https://travis-ci.org/RenoFi/html-webpack-transform-plugin.svg?branch=master)](https://travis-ci.org/RenoFi/html-webpack-transform-plugin)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRenoFi%2Fhtml-webpack-transform-plugin.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRenoFi%2Fhtml-webpack-transform-plugin?ref=badge_shield)
 
 
 ## About
@@ -79,3 +80,7 @@ new HtmlWebpackTransformPlugin({
   },
 }),
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRenoFi%2Fhtml-webpack-transform-plugin.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FRenoFi%2Fhtml-webpack-transform-plugin?ref=badge_large)
