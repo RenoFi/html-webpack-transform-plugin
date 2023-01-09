@@ -17,4 +17,3 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_METHOD: squash
           MERGE_DELETE_BRANCH: true
-          MERGE_LABELS: automerge,dependencies
