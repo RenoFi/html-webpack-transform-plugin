@@ -6,9 +6,6 @@ on:
   check_suite:
     types:
       - completed
-  label:
-    types:
-      - created
   status: {}
 jobs:
   automerge:
@@ -21,3 +18,11 @@ jobs:
           MERGE_METHOD: squash
           MERGE_DELETE_BRANCH: true
           MERGE_LABELS: "automerge,!automerge blocked"
+      - name: automerge-dependencies
+        uses: pascalgn/automerge-action@v0.16.2
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_METHOD: squash
+          MERGE_DELETE_BRANCH: true
+          MERGE_LABELS: "dependencies,!automerge blocked"
+          MERGE_REMOVE_LABELS: ""
