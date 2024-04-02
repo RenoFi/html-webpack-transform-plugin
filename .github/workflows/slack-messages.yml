@@ -1,0 +1,17 @@
+name: post-slack-message
+on:
+  pull_request_target:
+    types:
+      - labeled
+jobs:
+  post-slack-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post a slack message when PR contains security changes
+        uses: slackapi/slack-github-action@v1.25.0
+        if: contains(github.event.pull_request.labels.*.name, 'security')
+        with:
+          channel-id: 'C026ZFU7H4K' # latacora slack channel
+          slack-message: "Pull Request with security changes: ${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
