@@ -2,7 +2,9 @@ name: automerge
 on:
   pull_request_review:
     types:
+      - labeled
       - submitted
+      - auto_merge_enabled
   check_suite:
     types:
       - completed
