@@ -1,10 +1,11 @@
 name: automerge
 on:
-  pull_request_review:
+  pull_request_target:
     types:
       - labeled
+  pull_request_review:
+    types:
       - submitted
-      - auto_merge_enabled
   check_suite:
     types:
       - completed
