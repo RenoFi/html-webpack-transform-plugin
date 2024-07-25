@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Post a slack message when PR contains security changes
         uses: slackapi/slack-github-action@v1.25.0
-        if: contains(github.event.pull_request.labels.*.name, 'security')
+        if: github.event.label.name == 'security'
         with:
           channel-id: 'C026ZFU7H4K' # latacora slack channel
           slack-message: "Pull Request with security changes: ${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
