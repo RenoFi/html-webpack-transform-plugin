@@ -39,5 +39,9 @@
   "resolutions": {
     "minimist": "^1.2.5",
     "**/**/minimist": "^1.2.5"
+  },
+  "dependencies": {
+    "braces": "^3.0.3",
+    "micromatch": "^4.0.8"
   }
 }
