@@ -7,7 +7,7 @@
 
 ## Security
 <!---
-Tag *@RenoFi/security* in this PR if any of the following are true:
+Tag this PR with *security* label, if any of the following are true:
 
 - [ ] This PR introduces a NEW third party dependency
 - [ ] Contains authentication or authorization checks as part of the code

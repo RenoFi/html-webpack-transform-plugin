@@ -1,13 +1,14 @@
 name: Auto approve dependency upgrades and hot-fix PRs
 on:
   pull_request_target:
-    types: [labeled, unlabeled, edited, ready_for_review, review_requested, auto_merge_enabled]
-
+    types:
+      - labeled
+      - ready_for_review
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
     steps:
       - uses: hmarr/auto-approve-action@v3
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]' || github.actor == 'renofidev' || contains(toJson(github), 'HOTFIX-AUTO-APPROVE')
+        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]' || github.actor == 'renofidev' || contains(github.event.pull_request.labels.*.name, 'HOTFIX-AUTO-APPROVE') || contains(github.event.pull_request.labels.*.name, 'self-approve') || contains(github.event.pull_request.labels.*.name, 'dependencies')
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
